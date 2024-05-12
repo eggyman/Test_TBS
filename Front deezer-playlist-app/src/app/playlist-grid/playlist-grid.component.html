@@ -1,0 +1,12 @@
+<div class="playlist-grid">
+  <mat-grid-list cols="3" rowHeight="2:1">
+    <mat-grid-tile *ngFor="let playlist of playlists" [routerLink]="['/playlist', playlist.id]">
+      <img [src]="playlist.picture_medium" alt="{{playlist.title}}">
+      <mat-grid-tile-header>
+        <h3>{{ playlist.title }}</h3>
+      </mat-grid-tile-header>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+
